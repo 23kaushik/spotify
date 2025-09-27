@@ -129,7 +129,7 @@ async function displayAlbums() {
 
 async function main() {
     await getsongs("aa");
-    playMusic(songs[0], true);
+    playMusic(songs[0]);
     displayAlbums();
 
     // Play/Pause
