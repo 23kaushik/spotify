@@ -1,109 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utlity.css">
-    <!-- <link rel="stylesheet" href="script.js"> -->
-    <title>Spotify - Web Player: Music for everyone</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibe Music</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container flex bg-black">
-        <div class="left  rounded">
-            <div class="close">
-                <img width="30" class="invert" src="img/close.svg" alt="">
-            </div>
-            <div class=" home bg-grey rounded m-1 p-1">
-                <div class="logo"><img width="150" class="invert" src="img/logo.svg" alt=""></div>
-                <ul>
-                    <li><img class="invert" src="img/home.svg" alt="home">Home</li>
-                    <li><img class="invert" src="img/search.svg" alt="search">Search</li>
-                </ul>
-            </div>
-            <div class="library bg-grey rounded m-1 p-1 ">
-                <div class="heading">
-                    <img class="invert" src="img/playlist.svg" alt="">
-                    <h2>
-                        Your library
-                    </h2>
-                </div>
-                <div class="songlist">
-                    <ul>
 
-                    </ul>
-                </div>
-                <div class="footer">
-                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
-                    </div>
-                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
-                </div>
-            </div>
-        </div>
-        <div class="right  bg-grey rounded  p-1">
-            <div class="header">
-                <div class="nav">
-                    <div class="hamburgerContainer">
-                        <img width="40" class="invert hamburger" src="img/humberger.svg" alt="">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18"
-                                stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
-                                stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="buttons">
-                    <button class="signupbtn"> Signup</button>
-                    <button class="loginbtn">Log in</button>
-                </div>
-            </div>
-            <div class="spotifyplaylist">
-                <h1>
-                    Spotify Playlist
-                </h1>
-                <div class="cardcontainer">
-                </div>
-                <div class="playbar">
-                    <div class="seekbar">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="abovebar">
-                        <div class="songinfo"></div>
-                        <div class="songbuttons">
-                            <img width="35" id="previous" src="img/prevesong.svg" alt="">
-                            <img width="35" id="play" src="img/play.svg" alt="">
-                            <img width="35" id="next" src="img/nextsong.svg" alt="">
-                        </div>
-                        <div class="timevol">
-                            <div class="songtime">
-                            </div>
-                            <div class="volume">
-                                <img width="25" src="img/volume.svg" alt="">
+<div class="app">
 
-                                <div class="range">
-                                    <input type="range" name="volume">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+  <!-- LEFT SIDEBAR -->
+   
+  <aside class="sidebar" id="sidebar">
+
+    <button class="mobile-close" id="mobileClose">×</button>
+
+    <div class="profile">
+      <div class="profile-avatar">V</div>
+      <span>Hi!</span>
+      <h2>Music<br>Listener</h2>
     </div>
 
-    <script src="script.js"></script>
+    <p class="side-label">Menu</p>
 
+    <nav class="side-menu">
+      <button class="side-item active" data-page="home">
+        <span>⌂</span> Home
+      </button>
+
+      <button class="side-item" data-page="explore">
+        <span>⌕</span> Explore
+      </button>
+
+      <button class="side-item" data-page="genres">
+        <span>♫</span> Genres
+      </button>
+
+      <button class="side-item" data-page="albums">
+        <span>▣</span> Albums
+      </button>
+
+      <button class="side-item" data-page="artists">
+        <span>♙</span> Artists
+      </button>
+    </nav>
+
+    <p class="side-label library-label">Library</p>
+
+    <nav class="side-menu">
+      <button class="side-item" id="favoritesBtn">
+        <span>♡</span> Favourites
+      </button>
+
+      <button class="side-item" id="popularBtn">
+        <span>▤</span> Popular
+      </button>
+
+      <button class="side-item" id="myMusicBtn">
+        <span>▣</span> My Music
+      </button>
+    </nav>
+
+    <div class="mini-player">
+      <div class="mini-wave">▂▅▃▇▅▂▆▃▇▅</div>
+
+      <div class="mini-track">
+        <img id="miniImage" src="img/logo.svg" alt="">
+        <div>
+          <strong id="miniTitle">Select a song</strong>
+          <span id="miniArtist">Artist</span>
+        </div>
+      </div>
+
+      <div class="mini-controls">
+        <button id="miniPrevious">◀</button>
+        <button id="miniPlay">▶</button>
+        <button id="miniNext">▶|</button>
+      </div>
+    </div>
+
+  </aside>
+
+
+  <!-- MAIN -->
+
+  <main class="main">
+
+
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+      <div class="topbar-left">
+        <button class="hamburger" id="hamburger">☰</button>
+        <h1 id="pageTitle">Home</h1>
+      </div>
+
+      <div class="header-actions">
+
+        <button class="header-icon" id="notificationBtn">♧</button>
+
+        <div class="search-box">
+          <span>⌕</span>
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Type here to search..."
+          >
+        </div>
+
+      </div>
+    </header>
+
+
+    <div class="dashboard">
+
+      <!-- CENTER COLUMN -->
+
+      <section class="center-content">
+
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+          <div class="hero-text">
+            <span>MUSIC MANIA</span>
+
+            <h2>
+              Listen to<br>
+              trending songs<br>
+              all the time
+            </h2>
+
+            <p>
+              Discover fresh independent music and enjoy
+              your favourite tracks anytime.
+            </p>
+
+            <button id="heroButton">Explore Now</button>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-disc">♫</div>
+            <div class="hero-note note-one">♪</div>
+            <div class="hero-note note-two">♫</div>
+          </div>
+
+        </section>
+
+
+
+
+        <!-- PLAYLIST -->
+
+        <section class="content-section">
+
+          <div class="section-title">
+            <h2>Playlist</h2>
+            <button id="seeAllAlbums">See More</button>
+          </div>
+
+          <div class="playlist-grid" id="playlistGrid">
+            <div class="loading">Loading playlists...</div>
+          </div>
+
+        </section>
+
+
+        <!-- TRENDING -->
+
+        <section class="content-section trending-section">
+
+          <div class="section-title">
+            <h2>Trending</h2>
+            <button id="seeAllSongs">See More</button>
+          </div>
+
+          <div class="track-list" id="trackList">
+            <div class="loading">Loading songs...</div>
+          </div>
+
+        </section>
+
+      </section>
+
+
+      <!-- RIGHT COLUMN -->
+
+      <aside class="right-panel">
+
+
+
+        <!-- TOP ARTISTS -->
+
+
+        <section class="artists-section">
+
+          <div class="section-title">
+            <h2>Top Artist</h2>
+          </div>
+
+          <div id="artistList"></div>
+
+          <button class="see-more-artists" id="seeMoreArtists">
+            See More
+          </button>
+
+        </section>
+
+
+        <!-- NOW PLAYING  -->
+
+        <section class="now-playing">
+
+          <div class="now-cover">
+            <img id="nowCover" src="" alt="">
+            <div class="cover-placeholder" id="coverPlaceholder">♫</div>
+          </div>
+
+          <h3 id="nowTitle">Choose a song</h3>
+          <p id="nowArtist">Start listening</p>
+
+          <div class="player-time">
+            <span id="currentTime">0:00</span>
+
+            <div class="progress" id="progress">
+              <div class="progress-fill" id="progressFill"></div>
+              <div class="progress-dot" id="progressDot"></div>
+            </div>
+
+            <span id="duration">0:00</span>
+          </div>
+
+          <div class="visualizer" id="visualizer">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+
+          <div class="main-controls">
+
+            <button id="favoriteCurrent" title="Favourite">♡</button>
+
+            <button id="previous" title="Previous">
+              ◀
+            </button>
+
+            <button class="main-play" id="play" title="Play">
+              ▶
+            </button>
+
+            <button id="next" title="Next">
+              ▶
+            </button>
+
+            <button id="repeat" title="Repeat">
+              ↻
+            </button>
+
+          </div>
+
+          <div class="volume-row">
+            <button id="muteBtn">🔊</button>
+
+            <input
+              id="volumeSlider"
+              type="range"
+              min="0"
+              max="100"
+              value="70"
+            >
+          </div>
+
+        </section>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
 </body>
-
 </html>
